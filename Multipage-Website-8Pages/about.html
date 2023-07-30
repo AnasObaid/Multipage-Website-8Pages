@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    #scroll-btn {
+      opacity: 0;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      background-color: #0058c3;
+      position: fixed;
+      bottom: 5%;
+      right: 2.5%;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      font: bold 20px monospace;
+      transition: opacity 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    #scroll-btn.show {
+      opacity: 1;
+      transition: opacity 1s, transform 1s;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    const scrollTop = function () {
+      // create HTML button element
+      const scrollBtn = document.createElement("button");
+      scrollBtn.innerHTML = "&uarr;";
+      scrollBtn.setAttribute("id", "scroll-btn");
+      document.body.appendChild(scrollBtn);
+      // hide/show button based on scroll distance
+      const scrollBtnDisplay = function () {
+        window.scrollY > window.innerHeight
+          ? scrollBtn.classList.add("show")
+          : scrollBtn.classList.remove("show");
+      };
+      window.addEventListener("scroll", scrollBtnDisplay);
+      // scroll to top when button clicked
+      const scrollWindow = function () {
+        if (window.scrollY != 0) {
+          setTimeout(function () {
+            window.scrollTo(0, window.scrollY - 70);
+            scrollWindow();
+          }, 1);
+        }
+      };
+      scrollBtn.addEventListener("click", scrollWindow);
+    };
+    scrollTop();
+
+  </script>
+
+  <!--ABOVE IS ADDED NEW CODE-->
+<title>Anu Quarantino Productions | About Us</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/arial.js"></script>
+<script type="text/javascript" src="js/cuf_run.js"></script>
+<script type="text/javascript" src="js/radius.js"></script>
+</head>
+<body>
+  <div class="main">
+    <div class="header">
+      <div class="header_resize">
+        <div class="logo"><a href="index.html"><img src="images/AQP Logo.png" alt="" width="250" height="128" /></a>
+        </div>
+      <div class="clr"></div>
+      <div class="menu_nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html" target="_blank">Blog</a></li>
+          <li><a href="faqs.html" target="_blank">FAQs</a></li>
+          <li class="active"><a href="about.html" target="_blank">About Us</a></li>
+		      <li><a href="contact.html" target="_blank">Contact Us</a></li>
+          <li><a href="cities.html" target="_blank">Cities</a></li>
+          <li class="last"><a href="login.html" target="_blank">Login</a></li>
+        </ul>
+        <div class="search">
+          <form id="form" name="form" method="post" action="#">
+            <span>
+            <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." />
+            <input name="b" type="image" src="images/search.gif" class="button" />
+            </span>
+          </form>
+        </div>
+      </div>
+      <div class="clr"></div>
+      <div class="header_img"> <img src="images/img_top 4.jpg" alt="" width="960" height="326" /></div>
+    </div>
+  </div>
+  <div class="clr"></div>
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar">
+        <div class="article">
+          <h2><span>About</span> Anu Quarantino</h2>
+          <div class="clr"></div>
+          <p>Welcome to Anu Quarantino Productions! We are a film production company dedicated to bringing unique and compelling stories to the screen.</p>
+          <p><strong>Founded by Anas Obaid, a passionate storyteller and filmmaker, our company has been creating award-winning films since 2011. Our team consists of talented professionals who share a common vision and passion for creating high-quality films that resonate with audiences.</strong></p>
+        </div>
+        <div class="article">
+          <h2><span>Our</span> Mission</h2>
+          <div class="clr"></div>
+          <p><strong>Our mission is to tell stories that matter and inspire, whether they are documentaries, feature films, or shorts. We believe that film has the power to educate, entertain, and challenge people's perspectives. That's why we approach each project with a commitment to excellence and a deep respect for the craft of filmmaking.</strong></p>
+          <p>At Anu Quarantino Productions, we take a collaborative approach to filmmaking, working closely with writers, directors, actors, and crew members to bring each project to life. We pride ourselves on creating a supportive and inclusive work environment that values diversity and promotes creativity.</p>
+          <p>Whether you are a film lover, a fellow filmmaker, or a potential collaborator, we invite you to explore our website and learn more about our company and our work. Thank you for your interest in Anu Quarantino Productions!</p>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="gadget">
+          <h2 class="star">What's New</h2>
+          <div class="clr"></div>
+          <ul class="sb_menu">
+            <li><a href="#">Developers' Story</a></li>
+            <li><a href="#">Sustainability Report</a></li>
+            <li><a href="#">Intellectual Property</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Archives</a></li>
+          </ul>
+        </div>
+        <div class="gadget">
+          <h2 class="star"><span>Sponsors</span></h2>
+          <div class="clr"></div>
+          <ul class="ex_menu">
+            <li><a href="https://www.coca-colacompany.com" target="_blank">Coca-Cola</a><br />
+              "Taste the Feeling"</li>
+            <li><a href="https://www.samsung.com/pk/" target="_blank">Samsung</a><br />
+              "Imagine the Possibilities"</li>
+            <li><a href="https://www.netflix.com" target="_blank">Netflix</a><br />
+              "See what's next"</li>
+            <li><a href="https://global.canon/en/" target="_blank">Canon</a><br />
+              "Delighting You Always"</li>
+            <li><a href="https://www.mercedes-benz.com/en/" target="_blank">Mercedes</a><br />
+              "The Best or Nothing"</li>
+            <li><a href="https://www.apple.com" target="_blank">Apple</a><br />
+              "Think Different"</li>
+          </ul>
+        </div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="fbg">
+    <div class="fbg_resize">
+      <div class="col c1">
+        <h2><span>Image Gallery</span></h2>
+        <a href="#"><img src="images/ig1.jpg" width="80" height="80" alt="" /></a> <a href="#"><img src="images/ig2.jpg" width="80" height="80" alt="" /></a> <a href="#"><img src="images/ig3.jpg" width="80" height="80" alt="" /></a> <a href="#"><img src="images/ig4.jpg" width="80" height="80" alt="" /></a> <a href="#"><img src="images/ig5.jpg" width="80" height="80" alt="" /></a> <a href="#"><img src="images/ig6.jpg" width="80" height="80" alt="" /></a> </div>
+        <div class="col c2">
+          <h2><span>Established</span></h2>
+          <p>Anu Quarantino Productions was established in 2011 with a mission to produce innovative and compelling films that inspire and captivate audiences around the world. Since its inception, the company has built a reputation for excellence in every aspect of filmmaking, from writing and directing to cinematography and editing. The team at Anu Quarantino Productions is committed to pushing the boundaries of storytelling and creating unforgettable cinematic experiences for viewers of all ages.</p>
+        </div>
+        <div class="col c3">
+          <h2><span>Contact</span></h2>
+          <p>Have a question or want to learn more about our services? Please don't hesitate to reach out to us. We'd be happy to hear from you! <a href="#">aghazali2001@gmail.com</a><br />
+            <a href="#">+92 300 5273771</a></p>
+        </div>
+        <div class="clr"></div>
+      </div>
+      <div class="footer">
+        <p class="lr">&copy; 2011 <a href="#">Anu Quarantino Corporation</a> - All Rights Reserved</p>
+        <p class="lf">Layout by Anas <a href="index.html"></a></p>
+        <div class="clr"></div>
+    </div>
+  </div>
+</div>
+</html>

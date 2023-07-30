@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    #scroll-btn {
+      opacity: 0;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      background-color: #0058c3;
+      position: fixed;
+      bottom: 5%;
+      right: 2.5%;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      font: bold 20px monospace;
+      transition: opacity 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    #scroll-btn.show {
+      opacity: 1;
+      transition: opacity 1s, transform 1s;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    const scrollTop = function () {
+      // create HTML button element
+      const scrollBtn = document.createElement("button");
+      scrollBtn.innerHTML = "&uarr;";
+      scrollBtn.setAttribute("id", "scroll-btn");
+      document.body.appendChild(scrollBtn);
+      // hide/show button based on scroll distance
+      const scrollBtnDisplay = function () {
+        window.scrollY > window.innerHeight
+          ? scrollBtn.classList.add("show")
+          : scrollBtn.classList.remove("show");
+      };
+      window.addEventListener("scroll", scrollBtnDisplay);
+      // scroll to top when button clicked
+      const scrollWindow = function () {
+        if (window.scrollY != 0) {
+          setTimeout(function () {
+            window.scrollTo(0, window.scrollY - 70);
+            scrollWindow();
+          }, 1);
+        }
+      };
+      scrollBtn.addEventListener("click", scrollWindow);
+    };
+    scrollTop();
+
+  </script>
+
+  <!--ABOVE IS ADDED NEW CODE-->
+<title>Anu Quarantino Productions</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/arial.js"></script>
+<script type="text/javascript" src="js/cuf_run.js"></script>
+<script type="text/javascript" src="js/radius.js"></script>
+</head>
+<body>
+<div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="logo"><a href="index.html"><img src="images/AQP Logo.png" alt="" width="250" height="128" /></a>
+      </div>
+      <div class="clr"></div>
+      <div class="menu_nav">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="blog.html" target="_blank">Blog</a></li>
+          <li><a href="faqs.html" target="_blank">FAQs</a></li>
+          <li><a href="about.html" target="_blank">About Us</a></li>
+		      <li><a href="contact.html" target="_blank">Contact Us</a></li>
+          <li><a href="cities.html" target="_blank">Cities</a></li>
+          <li class="last"><a href="login.html" target="_blank">Login</a></li>
+        </ul>
+        <div class="search">
+          <form id="form" name="form" method="post" action="#">
+            <span>
+            <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." />
+            <input name="b" type="image" src="images/search.gif" class="button" />
+            </span>
+          </form>
+        </div>
+      </div>
+      <div class="clr"></div>
+      <div class="header_img"> <img src="images/img_top.jpg" alt="" width="960" height="326" /></div>
+    </div>
+  </div>
+  <div class="clr"></div>
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar">
+        <div class="article">
+          <!--This is the Latest News Section-->
+          <h1>Latest News</h1>
+          <h2><span>Anu Quarantino Productions Receives Acclaim at Film Festival with Two Award Wins</span></h2>
+          <!--This is the First News Section-->
+          <div class="clr"></div>
+          <p>Posted on 1, Mar, 2023</p>
+          <img src="images/img_1.jpg" width="250" height="182" alt="" class="fl" /> Anu Quarantino Productions Wins Two Awards for High-Quality and Thought-Provoking Films at Recent Festival. </p>
+          <p><a href="#">Read more </a></p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="article">
+          <h2><span>Anu Quarantino Productions Selected to Showcase Latest Short Film at New York City Film Festival</span></h2>
+          <div class="clr"></div>
+          <p>Posted on 25, Dec, 2022</p>
+          <img src="images/img_3.jpg" width="250" height="182" alt="" class="fl" />
+          <p>Anu Quarantino Productions' latest short film selected for prestigious New York City film festival, showcasing commitment to high-quality and thought-provoking filmmaking. </p>
+          <p><a href="#">Read more </a></p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="article">
+          <p>Page 1 of 3 <span class="butons"><a href="#">3</a><a href="#">2</a> <a href="#" class="active">1</a></span></p>
+        </div>
+      </div>
+    </div>
+    <!--THIS IS THE EXPANDABLE LIST-->
+      <div class="sidebar">
+          <div class="clr"></div>
+          <ul class="sb_menu">
+        <div class="panel-group">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <div class="star">
+                <a data-toggle="collapse" href="#collapse1">What's New</a>
+              </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+              <ul class="sb_menu">
+                <li><a href="#">Developers' Story</a></li>
+                <li><a href="#">Sustainability Report</a></li>
+                <li><a href="#">Intellectual Property</a></li>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Archives</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="gadget">
+          <h2 class="star">What's New</h2>
+          <div class="clr"></div>
+          <ul class="sb_menu">
+            <li><a href="#">Developers' Story</a></li>
+            <li><a href="#">Sustainability Report</a></li>
+            <li><a href="#">Intellectual Property</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Archives</a></li>
+          </ul>
+        </div>
+        <div class="gadget">
+          <h2 class="star"><span>Sponsors</span></h2>
+          <div class="clr"></div>
+          <ul class="ex_menu">
+            <li><a href="https://www.coca-colacompany.com" target="_blank">Coca-Cola</a><br />
+              "Taste the Feeling"</li>
+            <li><a href="https://www.samsung.com/pk/" target="_blank">Samsung</a><br />
+              "Imagine the Possibilities"</li>
+            <li><a href="https://www.netflix.com" target="_blank">Netflix</a><br />
+              "See what's next"</li>
+            <li><a href="https://global.canon/en/" target="_blank">Canon</a><br />
+              "Delighting You Always"</li>
+            <li><a href="https://www.mercedes-benz.com/en/" target="_blank">Mercedes</a><br />
+              "The Best or Nothing"</li>
+            <li><a href="https://www.apple.com" target="_blank">Apple</a><br />
+              "Think Different"</li>
+          </ul>
+        </div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="fbg">
+    <div class="fbg_resize">
+      <div class="col c1">
+        <h2><span>Image Gallery</span></h2>
+        <a href="#"><img src="images/ig1.jpg" width="80" height="80" alt="" /></a> <a href="#"><img src="images/ig2.jpg" width="80" height="80" alt="" /></a> <a href="#"><img src="images/ig3.jpg" width="80" height="80" alt="" /></a> <a href="#"><img src="images/ig4.jpg" width="80" height="80" alt="" /></a> <a href="#"><img src="images/ig5.jpg" width="80" height="80" alt="" /></a> <a href="#"><img src="images/ig6.jpg" width="80" height="80" alt="" /></a> </div>
+      <div class="col c2">
+        <h2><span>Established</span></h2>
+        <p>Anu Quarantino Productions was established in 2011 with a mission to produce innovative and compelling films that inspire and captivate audiences around the world. Since its inception, the company has built a reputation for excellence in every aspect of filmmaking, from writing and directing to cinematography and editing. The team at Anu Quarantino Productions is committed to pushing the boundaries of storytelling and creating unforgettable cinematic experiences for viewers of all ages.</p>
+      </div>
+      <div class="col c3">
+        <h2><span>Contact</span></h2>
+        <p>Have a question or want to learn more about our services? Please don't hesitate to reach out to us. We'd be happy to hear from you! <a href="#">aghazali2001@gmail.com</a><br />
+          <a href="#">+92 300 5273771</a></p>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="footer">
+      <p class="lr">&copy; 2011 <a href="#">Anu Quarantino Corporation</a> - All Rights Reserved</p>
+      <p class="lf">Layout by Anas <a href="index.html"></a></p>
+      <div class="clr"></div>
+    </div>
+  </div>
+</div>
+</html>

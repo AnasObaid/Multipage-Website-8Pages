@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    #scroll-btn {
+      opacity: 0;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      background-color: #0058c3;
+      position: fixed;
+      bottom: 5%;
+      right: 2.5%;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      font: bold 20px monospace;
+      transition: opacity 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    #scroll-btn.show {
+      opacity: 1;
+      transition: opacity 1s, transform 1s;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    const scrollTop = function () {
+      // create HTML button element
+      const scrollBtn = document.createElement("button");
+      scrollBtn.innerHTML = "&uarr;";
+      scrollBtn.setAttribute("id", "scroll-btn");
+      document.body.appendChild(scrollBtn);
+      // hide/show button based on scroll distance
+      const scrollBtnDisplay = function () {
+        window.scrollY > window.innerHeight
+          ? scrollBtn.classList.add("show")
+          : scrollBtn.classList.remove("show");
+      };
+      window.addEventListener("scroll", scrollBtnDisplay);
+      // scroll to top when button clicked
+      const scrollWindow = function () {
+        if (window.scrollY != 0) {
+          setTimeout(function () {
+            window.scrollTo(0, window.scrollY - 70);
+            scrollWindow();
+          }, 1);
+        }
+      };
+      scrollBtn.addEventListener("click", scrollWindow);
+    };
+    scrollTop();
+
+  </script>
+
+  <!--ABOVE IS ADDED NEW CODE-->
+<title>Anu Quarantino Productions | Blog</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/arial.js"></script>
+<script type="text/javascript" src="js/cuf_run.js"></script>
+<script type="text/javascript" src="js/radius.js"></script>
+</head>
+<body>
+  <div class="main">
+    <div class="header">
+      <div class="header_resize">
+        <div class="logo"><a href="index.html"><img src="images/AQP Logo.png" alt="" width="250" height="128" /></a>
+        </div>
+      <div class="clr"></div>
+      <div class="menu_nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="blog.html" target="_blank">Blog</a></li>
+          <li><a href="faqs.html" target="_blank">FAQs</a></li>
+          <li><a href="about.html" target="_blank">About Us</a></li>
+		      <li><a href="contact.html" target="_blank">Contact Us</a></li>
+          <li><a href="cities.html" target="_blank">Cities</a></li>
+          <li class="last"><a href="login.html" target="_blank">Login</a></li>
+        </ul>
+        <div class="search">
+          <form id="form" name="form" method="post" action="#">
+            <span>
+            <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." />
+            <input name="b" type="image" src="images/search.gif" alt="search" class="button" />
+            </span>
+          </form>
+        </div>
+      </div>
+      <div class="clr"></div>
+      <div class="header_img"> <img src="images/img_top 2.jpg" alt="" width="960" height="326" /></div>
+    </div>
+  </div>
+  <div class="clr"></div>
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar">
+        <div class="article">
+          <h2><span>A Blog</span> Entry</h2>
+          <div class="clr"></div>
+          <p>Posted by <a href="#">Sana</a> <span>&nbsp;&bull;&nbsp;</span></p>
+          <p>Welcome to the Anu Quarantino Productions blog, your go-to source for all things related to film production! Our team is dedicated to creating high-quality films that capture the imagination and inspire audiences.</p>
+	      <p>In this blog, we'll be sharing behind-the-scenes stories, production updates, and insights into our creative process. From pre-production to post-production, we'll take you through the entire filmmaking journey and give you a glimpse into what it takes to bring a film to life.</p>
+		  <p>We'll also be featuring interviews with industry professionals, discussing the latest film trends and technologies, and exploring the art and craft of filmmaking. Whether you're an aspiring filmmaker or a movie enthusiast, our blog is the perfect place to stay up-to-date with the latest news and insights from the world of film.</p>
+		  <p>So, join us on this exciting journey, and stay tuned for more updates from Anu Quarantino Productions!</p>
+          <p>Tags: <a href="#">AnuQuarantinoProductions</a>, <a href="#">behindthescenes</a>, <a href="#">postproduction</a>, <a href="#">filmnews</a></p>
+          <p><a href="#"><strong>Comments (3)</strong></a> <span>&nbsp;&bull;&nbsp;</span> May 27, 2016 &nbsp;•&nbsp; <a href="#"><strong>Edit</strong></a></p>
+        </div>
+        <div class="article">
+          <h2><span>3</span> Comments</h2>
+          <div class="clr"></div>
+          <div class="comment"> <a href="#"><img src="images/Jennifer.png" width="40" height="40" alt="" class="userpic" /></a>
+            <p><a href="#">Jennifer</a> Says:<br />
+              May 28th, 2016 at 2:17 pm</p>
+            <p>I'm so excited to follow along with your filmmaking journey! It's always fascinating to get a glimpse into the creative process behind the movies we love.</p>
+          </div>
+          <div class="comment"> <a href="#"><img src="images/Karim.jpg" width="40" height="40" alt="" class="userpic" /></a>
+            <p><a href="#">Karim</a> Says:<br />
+              May 29th, 2016 at 3:21 pm</p>
+            <p>I'm particularly excited to read your behind-the-scenes stories and production updates. It's always interesting to see how a film comes together, from the early stages of pre-production to the final edits in post-production.</p>
+          </div>
+          <div class="comment"> <a href="#"><img src="images/zainab.jpg" width="40" height="40" alt="" class="userpic" /></a>
+            <p><a href="#">Zainab</a> Says:<br />
+              June 12th, 2016 at 4:20 am</p>
+            <p>Your interviews with industry professionals sound like they're going to be a must-read for anyone interested in the film industry. I'm always eager to hear insights from those who have made a career in the field, and I'm sure your blog will deliver.</p>
+          </div>
+        </div>
+        <div class="article">
+          <h2><span>Leave a</span> Comment</h2>
+          <div class="clr"></div>
+          <form action="#" method="post" id="leavereply">
+            <ol>
+              <li>
+                <label for="name">Name (required)</label>
+                <input id="name" name="name" class="text" />
+              </li>
+              <li>
+                <label for="email">Email Address (required)</label>
+                <input id="email" name="email" class="text" />
+              </li>
+              <li>
+                <label for="website">Website</label>
+                <input id="website" name="website" class="text" />
+              </li>
+              <li>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="8" cols="50"></textarea>
+              </li>
+              <li>
+                <input type="image" name="imageField" id="imageField" src="images/submit.gif" alt="search" class="send" />
+                <div class="clr"></div>
+              </li>
+            </ol>
+          </form>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="gadget">
+          <h2 class="star">What's New</h2>
+          <div class="clr"></div>
+          <ul class="sb_menu">
+            <li><a href="#">Developers' Story</a></li>
+            <li><a href="#">Sustainability Report</a></li>
+            <li><a href="#">Intellectual Property</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Archives</a></li>
+          </ul>
+        </div>
+        <div class="gadget">
+          <h2 class="star"><span>Sponsors</span></h2>
+          <div class="clr"></div>
+          <ul class="ex_menu">
+            <li><a href="https://www.coca-colacompany.com" target="_blank">Coca-Cola</a><br />
+              "Taste the Feeling"</li>
+            <li><a href="https://www.samsung.com/pk/" target="_blank">Samsung</a><br />
+              "Imagine the Possibilities"</li>
+            <li><a href="https://www.netflix.com" target="_blank">Netflix</a><br />
+              "See what's next"</li>
+            <li><a href="https://global.canon/en/" target="_blank">Canon</a><br />
+              "Delighting You Always"</li>
+            <li><a href="https://www.mercedes-benz.com/en/" target="_blank">Mercedes</a><br />
+              "The Best or Nothing"</li>
+            <li><a href="https://www.apple.com" target="_blank">Apple</a><br />
+              "Think Different"</li>
+          </ul>
+        </div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="fbg">
+    <div class="fbg_resize">
+      <div class="col c1">
+        <h2><span>Image Gallery</span></h2>
+        <a href="#"><img src="images/ig1.jpg" width="80" height="80" alt="" /></a> <a href="#"><img src="images/ig2.jpg" width="80" height="80" alt="" /></a> <a href="#"><img src="images/ig3.jpg" width="80" height="80" alt="" /></a> <a href="#"><img src="images/ig4.jpg" width="80" height="80" alt="" /></a> <a href="#"><img src="images/ig5.jpg" width="80" height="80" alt="" /></a> <a href="#"><img src="images/ig6.jpg" width="80" height="80" alt="" /></a> </div>
+      <div class="col c2">
+        <h2><span>Established</span></h2>
+        <p>Anu Quarantino Productions was established in 2011 with a mission to produce innovative and compelling films that inspire and captivate audiences around the world. Since its inception, the company has built a reputation for excellence in every aspect of filmmaking, from writing and directing to cinematography and editing. The team at Anu Quarantino Productions is committed to pushing the boundaries of storytelling and creating unforgettable cinematic experiences for viewers of all ages.</p>
+      </div>
+      <div class="col c3">
+        <h2><span>Contact</span></h2>
+        <p>Have a question or want to learn more about our services? Please don't hesitate to reach out to us. We'd be happy to hear from you! <a href="#">aghazali2001@gmail.com</a><br />
+          <a href="#">+92 300 5273771</a></p>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="footer">
+      <p class="lr">&copy; 2011 <a href="#">Anu Quarantino Corporation</a> - All Rights Reserved</p>
+      <p class="lf">Layout by Anas <a href="index.html"></a></p>
+      <div class="clr"></div>
+    </div>
+  </div>
+</div>
+</html>
